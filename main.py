@@ -29,7 +29,7 @@ def get_weather():
         response = requests.get('https://api.open-meteo.com/v1/forecast', params=params, timeout=10)
         response.raise_for_status()
         data = response.json()
-        print(f'Temperature : {data['current']['temperature_2m']}°C')
-        print(f'Wind Speed : {data['current']['wind_speed_10m']} Km/h')
+        print(f"Temperature : {data['current']['temperature_2m']}°C")
+        print(f"Wind Speed : {data['current']['wind_speed_10m']} Km/h")
 
 get_weather()
